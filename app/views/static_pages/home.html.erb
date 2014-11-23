@@ -1,0 +1,17 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside>
+      <div id='buttons'>
+        <button id='conference'>Create conference</button>
+        <button id='rider'>Find a ride!</button>
+      </div>
+        <%= render 'shared/user_info' %>
+        <%= render 'shared/conference_form' %>
+    </aside>
+  </div>
+<% else %>
+  <div style="margin-top:100px">
+    <%= link_to "Sign up now!", signup_path,
+                                class: "button" %>
+  </div>
+<% end %>

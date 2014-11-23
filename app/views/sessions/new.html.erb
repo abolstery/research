@@ -1,0 +1,22 @@
+<% provide(:title, "Sign in") %>
+<h2 style='margin:50px 0 20px 0'>Sign in</h2>
+
+<div class="row">
+  <div style='margin: 0 auto;'>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <br>
+      <div style='margin: -60px 0 50px 0'>
+        <%= f.submit "Sign in", class: "button" %>
+      </div>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", signup_path, class: "link small" %></p>
+  </div>
+</div>

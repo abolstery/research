@@ -1,0 +1,11 @@
+<div id='user-info'>
+<h1 style="margin-bottom:20px">
+  <%= current_user.name %>
+</h1>
+<div style="margin-bottom:50px">
+  <%= link_to "View My Profile", current_user, class: "link" %>
+</div>
+<div>
+  <%= pluralize(current_user.conferences.count, "conference") %>
+</div>
+</div>
