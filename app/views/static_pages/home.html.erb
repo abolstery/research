@@ -2,11 +2,9 @@
   <div class="row">
     <aside>
       <div id='buttons'>
-        <button id='conference'>Create conference</button>
-        <button id='rider'>Find a ride!</button>
+        <button id='conference'><%= render 'shared/user_info' %>Create conference</button>
+        <button id='rider'><%= render 'shared/conference_form' %>Find a ride!</button>
       </div>
-        <%= render 'shared/user_info' %>
-        <%= render 'shared/conference_form' %>
     </aside>
   </div>
 <% else %>
